@@ -23,8 +23,9 @@ import * as roles from '../components/Roles';
 
 });
 
-test('Logowanie poprawnymi danymi - problemUser', async t => {
+test.skip('Logowanie problemUser', async t => {
     await t
+        .debug()
         .useRole(roles.problemUser);
     await t
         .click(burgerButton)

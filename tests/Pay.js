@@ -10,13 +10,6 @@ const addToCartButton = Selector('.btn_primary.btn_inventory');
 const addToCartLastButton = Selector('.inventory_item').sibling(-1).find('.btn_primary.btn_inventory');
 const removeButton = Selector('.btn_secondary.btn_inventory')
 
-
-
-
-
-
-
-
 fixture `PayTest`
 .page`https://www.saucedemo.com/`
 
@@ -73,7 +66,7 @@ var elements = [];
     }
 
     const randomElement = Math.floor(Math.random() * (elements.length - 0)) + 0;
-    console.log(randomElement)
+    console.log('random element is', randomElement)
 
     await t
             .click(addToCartButton.nth(randomElement));
