@@ -1,11 +1,14 @@
 import createTestCafe from "testcafe";
 import {Selector, t} from 'testcafe';
 import { Role } from 'testcafe';
+import getLoginPageSelectors from "../components/loginPage";
 import * as roles from '../components/Roles';
 
 
-    const burgerButton = Selector('.bm-burger-button');
-    const logoutButton = Selector('#logout_sidebar_link');
+    const {
+        burgerButton,
+        logoutButton,
+    } = getLoginPageSelectors();
     
 
 

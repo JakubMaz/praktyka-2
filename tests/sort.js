@@ -1,13 +1,20 @@
 import {Selector, t} from 'testcafe';
 import { Role } from 'testcafe';
+import getPaySelectors from '../components/payComponent';
+import getSortSelectors from '../components/sortComponent';
 import * as roles from '../components/Roles';
 
 fixture `SortTest`
     .page`https://www.saucedemo.com/`
 
-    const price = Selector('.inventory_item_price');
-    const sortOption = Selector('.product_sort_container');
-    const fromLowerPrice = Selector("[value='lohi']");
+    const {
+        sortOption,
+        fromLowerPrice,
+    } = getSortSelectors();
+
+    const {
+        price,
+    } = getPaySelectors();
 
     test('creata array with prices and check hilo sort work', async t => {  
 

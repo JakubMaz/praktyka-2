@@ -1,14 +1,16 @@
 import {Selector, t} from 'testcafe';
 import { Role } from 'testcafe';
+import getPaySelectors from '../components/payComponent';
 import * as roles from '../components/Roles';
 
-const addtoCard = Selector('.inventory_item')
-    .withText("Sauce Labs Backpack")
-    .find('.btn_primary.btn_inventory');
-const shoppingCard = Selector('.fa-layers-counter.shopping_cart_badge');
-const addToCartButton = Selector('.btn_primary.btn_inventory');
-const addToCartLastButton = Selector('.inventory_item').sibling(-1).find('.btn_primary.btn_inventory');
-const removeButton = Selector('.btn_secondary.btn_inventory')
+
+const {
+    addtoCard,
+    shoppingCard,
+    addToCartButton,
+    addToCartLastButton,
+    removeButton,
+} = getPaySelectors();
 
 fixture `PayTest`
 .page`https://www.saucedemo.com/`
