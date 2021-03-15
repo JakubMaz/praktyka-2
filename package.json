@@ -1,14 +1,16 @@
+
 {
   "name": "prak-2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome ./tests"
+    "test": "testcafe chrome ./tests/ --reporter html:raports/raport.html"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "testcafe": "^1.9.4"
+    "testcafe": "^1.9.4",
+    "testcafe-reporter-html": "^1.4.6"
   }
 }
